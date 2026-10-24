@@ -1,0 +1,33 @@
+{
+    "section": "11.8.6",
+    "artefact": "Explainable Loan Risk Decision Support System",
+    "export_timestamp": "2026-09-17T15:05:36",
+    "deployment_directory": "deployment_bundle",
+    "files": {
+        "model_bundle": "loan_risk_model_bundle.joblib",
+        "input_schema_csv": "artifact_input_schema.csv",
+        "input_schema_json": "artifact_input_schema.json",
+        "reference_profile": "reference_profile.csv",
+        "feature_architecture": "feature_architecture.json",
+        "deployment_configuration": "deployment_config.json"
+    },
+    "architecture": {
+        "user_facing_variables": 40,
+        "trained_model_variables": 183,
+        "decision_threshold": 0.23,
+        "predictive_model": "XGBClassifier",
+        "shap_explainer": "TreeExplainer"
+    },
+    "validation": {
+        "reference_probability": 0.12575727701187134,
+        "reference_binary_decision": 0,
+        "reference_reconstruction_shape": [
+            1,
+            183
+        ],
+        "shap_contribution_count": 183,
+        "model_modified": false,
+        "model_retrained": false,
+        "shap_explainer_modified": false
+    }
+}

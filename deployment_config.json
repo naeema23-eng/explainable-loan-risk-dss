@@ -1,0 +1,35 @@
+{
+    "artefact_name": "Explainable Loan Risk Decision Support System",
+    "framework": "Streamlit",
+    "predictive_model": "XGBClassifier",
+    "shap_explainer": "TreeExplainer",
+    "user_facing_variable_count": 40,
+    "trained_model_variable_count": 183,
+    "decision_threshold": 0.23,
+    "risk_bands": {
+        "Low": {
+            "minimum": 0.0,
+            "maximum_exclusive": 0.1
+        },
+        "Moderate": {
+            "minimum": 0.1,
+            "maximum_exclusive": 0.23
+        },
+        "Elevated": {
+            "minimum": 0.23,
+            "maximum_exclusive": 0.4
+        },
+        "High": {
+            "minimum": 0.4,
+            "maximum_inclusive": 1.0
+        }
+    },
+    "top_local_factors": 10,
+    "prediction_target": "loan default risk",
+    "decision_support_only": true,
+    "shap_interpretation": "Model attribution rather than causal inference",
+    "input_reconstruction": "40 user-facing variables reconstructed into the complete 183-variable trained-model representation",
+    "model_retrained": false,
+    "model_modified": false,
+    "shap_explainer_modified": false
+}
